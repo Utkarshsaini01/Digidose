@@ -13,7 +13,7 @@ const Appointment = ({navigation}) => {
     try {
       const token = await AsyncStorage.getItem('token');
       const response = await fetch(
-        'http://192.168.15.118:5000/patient/appointments',
+        'your_server_endpoint/patient/appointments',
         {
           method: 'GET',
           headers: {

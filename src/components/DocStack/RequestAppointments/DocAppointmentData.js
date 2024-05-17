@@ -24,7 +24,7 @@ const DoctorAppointmentData = () => {
   const fetchAppointments = async () => {
     try {
       const token = await AsyncStorage.getItem('token');
-      const response = await fetch('http://192.168.15.118:5000/doctor/requested-appointments', {
+      const response = await fetch('your_server_endpoint/doctor/requested-appointments', {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -42,7 +42,7 @@ const DoctorAppointmentData = () => {
   const handleApprove = async (appointmentId) => {
     try {
       const token = await AsyncStorage.getItem('token');
-      const response = await fetch('http://192.168.15.118:5000/doctor/change-appointment-status/', {
+      const response = await fetch('your_server_endpoint/doctor/change-appointment-status/', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ const DoctorAppointmentData = () => {
   const handleCancel = async (appointmentId) => {
     try {
       const token = await AsyncStorage.getItem('token');
-      const response = await fetch('http://192.168.15.118:5000/doctor/change-appointment-status/', {
+      const response = await fetch('your_server_endpoint/doctor/change-appointment-status/', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

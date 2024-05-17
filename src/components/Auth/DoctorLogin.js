@@ -9,7 +9,7 @@ const DoctorLogin = ({ navigation }) => {
   const {setIsAuthenticated} = useContext(AuthContext);
   const handleLogin = async () => {
     try {
-      const response = await fetch('http://192.168.15.118:5000/doctor/login', {
+      const response = await fetch('your_doctor_login_api', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -14,7 +14,7 @@ const ApprovedAppointmentView = ({ appointment, onClose }) => {
   const fetchHealthData = async () => {
     try {
       const token = await AsyncStorage.getItem('token');
-      const response = await fetch('http://192.168.15.118:5000/doctor/view-health-data', {
+      const response = await fetch('your_server_endpoint/doctor/view-health-data', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

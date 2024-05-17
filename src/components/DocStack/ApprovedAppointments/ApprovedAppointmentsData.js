@@ -12,7 +12,7 @@ const ApprovedAppointmentData = () => {
     try {
       const token = await AsyncStorage.getItem('token');
       const response = await fetch(
-        'http://192.168.15.118:5000/doctor/approved-appointments',
+        'your_server_endpoint/doctor/approved-appointments',
         {
           method: 'GET',
           headers: {
@@ -33,7 +33,7 @@ const ApprovedAppointmentData = () => {
     try {
       const token = await AsyncStorage.getItem('token');
       const response = await fetch(
-        'http://192.168.15.118:5000/doctor/change-appointment-status/',
+        'your_server_endpoint/doctor/change-appointment-status/',
         {
           method: 'PUT',
           headers: {
@@ -63,7 +63,7 @@ const ApprovedAppointmentData = () => {
   const handleComplete = async appointment_id => {
     try {
       const token = await AsyncStorage.getItem('token');
-      const response = await fetch(`http://192.168.15.118:5000/doctor/appointment-completed/${appointment_id}`, {
+      const response = await fetch(`your_server_endpoint/doctor/appointment-completed/${appointment_id}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,

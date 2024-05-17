@@ -9,7 +9,7 @@ const AppointmentData = (props) => {
   const handleDelete = async (appointmentId) => {
     try {
       const token = await AsyncStorage.getItem('token');
-      const response = await fetch(`http://192.168.15.118:5000/patient/delete-appointment/${appointmentId}`, {
+      const response = await fetch(`your_server_endpoint/patient/delete-appointment/${appointmentId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -28,7 +28,7 @@ const AppointmentData = (props) => {
   const handleShareData = async (appointmentId, doctor_email) => {
     try {
       const token = await AsyncStorage.getItem('token');
-      const response = await fetch('http://192.168.15.118:5000/patient/share-health-data', {
+      const response = await fetch('your_server_endpoint/patient/share-health-data', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

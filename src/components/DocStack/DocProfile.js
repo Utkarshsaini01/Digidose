@@ -18,7 +18,7 @@ const DocProfile = () => {
       try {
         const storedToken = await AsyncStorage.getItem('token');
 
-        const response = await fetch('http://192.168.15.118:5000/doctor/profile', {
+        const response = await fetch('your_server_endpoint/doctor/profile', {
           method: 'GET',
           headers: {
             Authorization: `Bearer ${storedToken}`,
@@ -56,7 +56,7 @@ const DocProfile = () => {
     try {
       const storedToken = await AsyncStorage.getItem('token');
         
-      const response = await fetch('http://192.168.15.118:5000/doctor/edit-info', {
+      const response = await fetch('your_server_endpoint/doctor/edit-info', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

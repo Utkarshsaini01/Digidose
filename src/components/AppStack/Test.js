@@ -32,18 +32,18 @@ const Test = () => {
 
   const sampleData = {
     BMI: 24.8,
-    Chainsmoker: 0,
-    ChestPainType: 0,
+    Chainsmoker: 1,
+    ChestPainType: 1,
     DBloodPressure: 80,
     CBloodPressure: 120,
     BloodGlucose: 100,
-    LDLCholesterol: 72,
-    HDLCholesterol: 68,
-    ECGResult: 0,
-    MaxHeartRate: 72,
+    LDLCholesterol: 200,
+    HDLCholesterol: 200,
+    ECGResult: 1,
+    MaxHeartRate: 105,
     Temperature: 98.6,
     RespiratoryRate: 16,
-    SpO2: 96,
+    SpO2: 90,
     Urination: 0,
     StressLevel: 46,
   };
@@ -51,7 +51,7 @@ const Test = () => {
   const handleButtonPress = async () => {
     setTestRunning(true);
 
-    const apiUrl = 'http://192.168.15.118:5000/predict';
+    const apiUrl = 'your_predict_api_endpoint';
 
     try {
       const response = await fetch(apiUrl, {

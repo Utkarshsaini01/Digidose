@@ -10,7 +10,7 @@ const Data = ({ navigation }) => {
   const fetchHealthCheckData = async () => {
     try {
       const token = await AsyncStorage.getItem('token');
-      const response = await fetch("http://192.168.15.118:5000/patient/health-check", {
+      const response = await fetch("your_server_endpoint/patient/health-check", {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`

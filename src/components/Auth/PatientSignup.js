@@ -16,7 +16,7 @@ const PatientSignup = ({ navigation }) => {
 
   const handleSignup = async () => {
     try {
-      const response = await fetch('http://192.168.15.118:5000/patient/signup', {
+      const response = await fetch('your_patient_signup_api', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

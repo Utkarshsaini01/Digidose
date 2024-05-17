@@ -29,7 +29,7 @@ const RequestAppointment = ({ navigation }) => {
       }
 
 
-      const response = await fetch(`http://192.168.15.118:5000/doctors/search?query=${searchQuery}`, {
+      const response = await fetch(`your_server_endpoint/doctors/search?query=${searchQuery}`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -67,7 +67,7 @@ const RequestAppointment = ({ navigation }) => {
         return;
       }
 
-      const response = await fetch('http://192.168.15.118:5000/patient/request-appointment/', {
+      const response = await fetch('your_server_endpoint/patient/request-appointment/', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,

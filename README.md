@@ -2,7 +2,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 # Getting Started
 
->**Note**: Make sure you have clone the repository, before proceeding.
+>**Note**: Make sure you have clone the repository and change the api endpoints according to you, before proceeding.
 
 ## Step 1: Start the Metro Server
 
@@ -17,6 +17,7 @@ npm start
 # OR using Yarn
 yarn start
 ```
+
 
 ## Step 2: Start your Application
 
